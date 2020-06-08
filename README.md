@@ -16,6 +16,7 @@
   3. To produce a code book named CodeBook.md that describes the variables, the data, and any transformations or work that is performed to clean up the data 
   4. Readme file to show how all scripts work in harmony
   5. run_analysis.R file which should do following
+  
     1. Merges the training and the test sets to create one data set.
     2. Extracts only the measurements on the mean and standard deviation for each measurement.
     3. Uses descriptive activity names to name the activities in the data set
