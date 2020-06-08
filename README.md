@@ -29,8 +29,8 @@
   
   1. README.md - a markdown file which gives an overview of the dataset, project and its arrangement
   2. CodeBook.md - a markdown file which provides defines and describes following: 
-    + content of the data set
-    + definition of variables
-    + descriptions of any transformation performed on data
+   + content of the data set
+   + definition of variables
+   + descriptions of any transformation performed on data
   3. FinalData.txt - final tidy data set
 
