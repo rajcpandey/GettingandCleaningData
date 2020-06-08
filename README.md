@@ -1,5 +1,5 @@
 
-# Project - Getting-and-Cleaning-Data
+# Project - Getting and Cleaning Data
 
 ### Purpose 
 
@@ -22,4 +22,15 @@
     3. Uses descriptive activity names to name the activities in the data set
     4. Appropriately labels the data set with descriptive variable names.
     5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+    
+# Repository Getting-and-Cleaning-Data
+
+  This repository contains following files:
+  
+  1. README.md - a markdown file which gives an overview of the dataset, project and its arrangement
+  2. CodeBook.md - a markdown file which provides defines and describes following: 
+    + content of the data set
+    + definition of variables
+    + descriptions of any transformation performed on data
+  3. FinalData.txt - final tidy data set
 
