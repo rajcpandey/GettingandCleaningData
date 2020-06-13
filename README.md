@@ -100,3 +100,11 @@
   7. Create a factor using activityLabels data frame created in step 3 above and assign factor values to the Activity variable of ActivityDataSet data frame:
   
       ```ActivityDataSet$Activity <- factor(ActivityDataSet$Activity, levels = activityLabels[, 1], labels = activityLabels[, 2])```
+      
+  8. Store all default column names in variables and treat them to remove "-", "()" and other abbreviations:
+  
+      ```ActivityDataSetCols <- colnames(ActivityDataSet)```
+      
+      ```ActivityDataSetCols <- str_replace_all(ActivityDataSetCols, c("-" = "","[\\(\\)]" = "", "Acc" = "Accelerometer", "std" = "StandardDeviation", "Gyro" = "Gyroscope", "mean" = "Mean"))```
+      
+      
