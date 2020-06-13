@@ -111,10 +111,10 @@
       
       ```colnames(ActivityDataSet) <- ActivityDataSetCols```
       
-  9. Finally, group data by Subjects and Activities and calculate average using ```summarise_each``` followed by generation of tidydataset.csv
+  9. Finally, group data by Subjects and Activities and calculate average using ```summarise_each``` followed by generation of tidydataset.txt
   
       ```ActivityTidyData <- ActivityDataSet %>% group_by(Subjects, Activity) %>% summarise_each(funs(mean))```
       
-      ```write.csv(ActivityTidyData, "tidydataset.csv", row.names=FALSE)```
+      ```write.txt(ActivityTidyData, "tidydataset.txt", row.names=FALSE)```
 
-  10. Final output can be accessed from [https://github.com/rajcpandey/Getting-and-Cleaning-Data/blob/master/tidydataset.csv] (tidydataset.csv) link.
+  10. Final output can be accessed from [https://github.com/rajcpandey/Getting-and-Cleaning-Data/blob/master/tidydataset.txt] (tidydataset.txt) link.
