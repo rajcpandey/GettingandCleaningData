@@ -88,12 +88,12 @@ Following table list the variables from tidydataset.csv file which the output of
   FrequencyBodyGyroscopeJerkMagnitudeStandardDeviation| num | Standard deviation for magnitude of Body angular velocity to obtain jerk signals - frequency dimension
   FrequencyBodyGyroscopeJerkMagnitudeMeanFrequency| num | Weighted average magnitude of Body angular velocity to obtain jerk signals - frequency dimension
   
-  ## TRansformations on the data
+  ## Transformations on the data
   
   Transformation                                    | Description
   ----------------                                  |-------------
   Treatment of special charaters "-","()"           | Special characters were removed from variable names
-  Removal of characters f and t                     | Individual characters f and t were replaced with Time and Frequency respectively to show their association with the domain
+  Replacement of characters f and t                 | Individual characters f and t were replaced with Time and Frequency respectively at the start of the variable name to show their association with the domain
   Abbreviations                                     | Abbreviations are replaced with their full forms i.e. Mag with Magnitude, Freq with Frequency
   Corrections                                       | When transformation were performed some of the variable names had duplicate words. The double accurance of same word has been corrected
   
