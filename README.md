@@ -47,5 +47,5 @@
   1. Set sub directory where datasets are stored using ```FileLocation <- "./UCI HAR Dataset/" ```
   2. Read qualitatvie data features & activity using following code lines:
   
-    ```  features <- read.table(paste0(FileLocation,"features.txt"), as.is = TRUE)
-         activityLabels <- read.table(paste0(FileLocation, "activity_labels.txt"))```
+    ```features <- read.table(paste0(FileLocation,"features.txt"), as.is = TRUE)
+       activityLabels <- read.table(paste0(FileLocation, "activity_labels.txt"))```
