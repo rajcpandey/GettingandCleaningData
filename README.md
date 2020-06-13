@@ -48,6 +48,7 @@
   2. Read qualitatvie data features & activity using following code lines
   
       ```features <- read.table(paste0(FileLocation,"features.txt"), as.is = TRUE)```
+      
       ```activityLabels <- read.table(paste0(FileLocation, "activity_labels.txt"))```
       
   3. Assign meaningful variable names to qualitative data uploaded in steps above
