@@ -57,9 +57,8 @@
       
   4. Read quantitative data and assign meaningful variable names one file at a time
   
-      ```SubjectsTrain <- read.table(paste0(FileLocation, "train/subject_train.txt"))```
-      
-      ```SubjectsTrain <- SubjectsTrain %>% rename(Subjects = V1)```
+      ```SubjectsTrain <- read.table(paste0(FileLocation, "train/subject_train.txt"))
+         SubjectsTrain <- SubjectsTrain %>% rename(Subjects = V1)```
       
       ```SubjectsTest <- read.table(paste0(FileLocation, "/test/subject_test.txt"))```
       
