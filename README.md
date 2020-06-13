@@ -48,4 +48,4 @@
   2. Read qualitatvie data features & activity using following code lines:
   
     ```features <- read.table(paste0(FileLocation,"features.txt"), as.is = TRUE)
-       activityLabels <- read.table(paste0(FileLocation, "activity_labels.txt"))```
+       activityLabels <- read.table(paste0(FileLocation, "activity_labels.txt"))``` 
