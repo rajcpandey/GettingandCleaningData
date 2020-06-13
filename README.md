@@ -117,3 +117,4 @@
       
       ```write.csv(ActivityTidyData, "tidydataset.csv", row.names=FALSE)```
 
+  10. Final output [https://github.com/rajcpandey/Getting-and-Cleaning-Data/blob/master/tidydataset.csv] (tidydataset.csv) can be accessed from here.
