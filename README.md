@@ -44,4 +44,4 @@
 
 ### Working of the code
 
-  1. Set sub directory where datasets are stored ```{r, EVAL=FALSE}   FileLocation <- "./UCI HAR Dataset/" ```
+  1. Set sub directory where datasets are stored ```{r, eval=FALSE}   FileLocation <- "./UCI HAR Dataset/" ```
