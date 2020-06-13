@@ -88,3 +88,7 @@
       ```testLabels <- read.table(paste0(FileLocation, "/test/y_test.txt"))```
       
       ```testLabels <- testLabels %>% rename(Activity = V1)```
+      
+  5. Start merging different data frames created in steps above to create one data frame. ```rbind``` to combine rows and ```cbind``` to combine columns:
+  
+      ```ActivityDataSet <- rbind(cbind(SubjectsTrain, trainingSets, trainingLabels), cbind(SubjectsTest, testSets, testLabels))```
