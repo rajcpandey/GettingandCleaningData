@@ -101,10 +101,19 @@
   
       ```ActivityDataSet$Activity <- factor(ActivityDataSet$Activity, levels = activityLabels[, 1], labels = activityLabels[, 2])```
       
-  8. Store all default column names in variables and treat them to remove "-", "()" and other abbreviations:
+  8. Store all default column names in variables and treat them to remove "-", "()" characters and other abbreviations like "Freq", "mean", "Gyro":
   
       ```ActivityDataSetCols <- colnames(ActivityDataSet)```
       
       ```ActivityDataSetCols <- str_replace_all(ActivityDataSetCols, c("-" = "","[\\(\\)]" = "", "Acc" = "Accelerometer", "std" = "StandardDeviation", "Gyro" = "Gyroscope", "mean" = "Mean"))```
       
+      ```ActivityDataSetCols <- str_remove_all(ActivityDataSetCols, c("^t" ="Time", "Mag" = "Magnitude", "^f" = "Frequency", "Freq" = "Frequency", "BodyBody" = "Body", "Frequencyuency" = "Frequency"))```
       
+      ```colnames(ActivityDataSet) <- ActivityDataSetCols```
+      
+  9. Finally, group data by Subjects and Activities and calculate average using ```summarise_each``` followed by generation of tidydataset.csv
+  
+      ```ActivityTidyData <- ActivityDataSet %>% group_by(Subjects, Activity) %>% summarise_each(funs(mean))```
+      
+      ```write.csv(ActivityTidyData, "tidydataset.csv", row.names=FALSE)```
+
