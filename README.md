@@ -45,12 +45,32 @@
 ### Working of the code
 
   1. Set sub directory where datasets are stored using ```FileLocation <- "./UCI HAR Dataset/" ```
-  2. Read qualitatvie data features & activity using following code lines
+  2. Read qualitatvie data features & activity using following code lines:
   
       ```features <- read.table(paste0(FileLocation,"features.txt"), as.is = TRUE)```
       
       ```activityLabels <- read.table(paste0(FileLocation, "activity_labels.txt"))```
       
-  3. Assign meaningful variable names to qualitative data uploaded in steps above
-  
+  3. Assign meaningful variable names to qualitative data uploaded in steps above. Piping is used to pass results to subsequent commands
+    
       ```activityLabels <- activityLabels %>% rename(activityID = V1, activityLabel = V2)```
+      
+  4. Read quantitative data and assign meaningful variable names one file at a time
+  
+    ```SubjectsTrain <- read.table(paste0(FileLocation, "train/subject_train.txt"))```
+    ```SubjectsTrain <- SubjectsTrain %>% rename(Subjects = V1)```
+    
+    ```SubjectsTest <- read.table(paste0(FileLocation, "/test/subject_test.txt"))```
+    ```SubjectsTest <- SubjectsTest %>% rename(Subjects = V1)```
+    
+    ```trainingSets <- read.table(paste0(FileLocation, "train/X_train.txt"))```
+    ```colnames(trainingSets) <- features[, 2]```
+    
+    ```testSets <- read.table(paste0(FileLocation, "/test/X_test.txt"))```
+    ```colnames(testSets) <- features[, 2]```
+    
+    ```trainingLabels <- read.table(paste0(FileLocation, "train/y_train.txt"))```
+    ```trainingLabels <- trainingLabels %>% rename(Activity = V1)```
+    
+    ```testLabels <- read.table(paste0(FileLocation, "/test/y_test.txt"))```
+    ```testLabels <- testLabels %>% rename(Activity = V1)```
