@@ -117,4 +117,4 @@
       
       ```write.txt(ActivityTidyData, "tidydataset.txt", row.names=FALSE)```
 
-  10. Final output can be accessed from [https://github.com/rajcpandey/Getting-and-Cleaning-Data/blob/master/tidydataset.txt] (tidydataset.txt) link.
+  10. Final output can be accessed from [https://github.com/rajcpandey/GettingandCleaningData/blob/master/tidydataset.txt] (tidydataset.txt) link.
