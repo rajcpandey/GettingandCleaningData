@@ -69,6 +69,8 @@
       
       ###### Tests
       
+      assigning column names using qualitative data frame created in step 2 above:
+      
       ```trainingSets <- read.table(paste0(FileLocation, "train/X_train.txt"))```
       
       ```colnames(trainingSets) <- features[, 2]```
