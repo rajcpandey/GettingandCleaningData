@@ -92,3 +92,11 @@
   5. Start merging different data frames created in steps above to create one data frame. ```rbind``` to combine rows and ```cbind``` to combine columns:
   
       ```ActivityDataSet <- rbind(cbind(SubjectsTrain, trainingSets, trainingLabels), cbind(SubjectsTest, testSets, testLabels))```
+      
+  6. Select subjects, activity, standard deviation and mean columns from the combined data frame. Used ```grepl``` to select different columns in one go: 
+    
+      ```ActivityDataSet <- ActivityDataSet[, grepl("Subjects|Activity|mean|std", colnames(ActivityDataSet))]```
+      
+  7. Create a factor using activityLabels data frame created in step 3 above and assign factor values to the Activity variable of ActivityDataSet data frame:
+  
+      ```ActivityDataSet$Activity <- factor(ActivityDataSet$Activity, levels = activityLabels[, 1], labels = activityLabels[, 2])```
