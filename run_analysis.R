@@ -68,6 +68,6 @@ library(stringr)
 # Step 5 - Create a second, independent tidy set with the average of each variable for each activity and each subject
 
 ActivityTidyData <- ActivityDataSet %>% group_by(Subjects, Activity) %>% summarise_each(funs(mean))
-
+str(ActivityTidyData)
 # output to file "tidydataset.csv"
 write.csv(ActivityTidyData, "tidydataset.csv", row.names=FALSE)
