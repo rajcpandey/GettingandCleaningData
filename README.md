@@ -57,20 +57,26 @@
       
   4. Read quantitative data and assign meaningful variable names one file at a time
   
-    ```SubjectsTrain <- read.table(paste0(FileLocation, "train/subject_train.txt"))```
-    ```SubjectsTrain <- SubjectsTrain %>% rename(Subjects = V1)```
-    
-    ```SubjectsTest <- read.table(paste0(FileLocation, "/test/subject_test.txt"))```
-    ```SubjectsTest <- SubjectsTest %>% rename(Subjects = V1)```
-    
-    ```trainingSets <- read.table(paste0(FileLocation, "train/X_train.txt"))```
-    ```colnames(trainingSets) <- features[, 2]```
-    
-    ```testSets <- read.table(paste0(FileLocation, "/test/X_test.txt"))```
-    ```colnames(testSets) <- features[, 2]```
-    
-    ```trainingLabels <- read.table(paste0(FileLocation, "train/y_train.txt"))```
-    ```trainingLabels <- trainingLabels %>% rename(Activity = V1)```
-    
-    ```testLabels <- read.table(paste0(FileLocation, "/test/y_test.txt"))```
-    ```testLabels <- testLabels %>% rename(Activity = V1)```
+      ```SubjectsTrain <- read.table(paste0(FileLocation, "train/subject_train.txt"))```
+      
+      ```SubjectsTrain <- SubjectsTrain %>% rename(Subjects = V1)```
+      
+      ```SubjectsTest <- read.table(paste0(FileLocation, "/test/subject_test.txt"))```
+      
+      ```SubjectsTest <- SubjectsTest %>% rename(Subjects = V1)```
+      
+      ```trainingSets <- read.table(paste0(FileLocation, "train/X_train.txt"))```
+      
+      ```colnames(trainingSets) <- features[, 2]```
+      
+      ```testSets <- read.table(paste0(FileLocation, "/test/X_test.txt"))```
+      
+      ```colnames(testSets) <- features[, 2]```
+      
+      ```trainingLabels <- read.table(paste0(FileLocation, "train/y_train.txt"))```
+      
+      ```trainingLabels <- trainingLabels %>% rename(Activity = V1)```
+      
+      ```testLabels <- read.table(paste0(FileLocation, "/test/y_test.txt"))```
+      
+      ```testLabels <- testLabels %>% rename(Activity = V1)```
