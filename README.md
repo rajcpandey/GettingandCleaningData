@@ -42,3 +42,6 @@
 
 ###### [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones] (Accelerometers from the Samsung Galaxy S smartphone)
 
+### Working of the code
+
+  1. Set sub directory where datasets are stored ```{r, EVAL=FALSE}   FileLocation <- "./UCI HAR Dataset/" ```
