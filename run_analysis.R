@@ -62,7 +62,7 @@ library(stringr)
 # feature.txt - Mag for Magnitude - Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm
 # feature.txt - f from Frequency - (Note the 'f' to indicate frequency domain signals)
   
-  ActivityDataSetCols <- str_remove_all(ActivityDataSetCols, c("^t" ="Time", "Mag" = "Magnitude", "^f" = "Frequency", "Freq" = "Frequency", "BodyBody" = "Body", "Frequencyuency" = "Frequency"))
+  ActivityDataSetCols <- str_replace_all(ActivityDataSetCols, c("^t" ="Time", "Mag" = "Magnitude", "^f" = "Frequency", "Freq" = "Frequency", "BodyBody" = "Body", "Frequencyuency" = "Frequency"))
   colnames(ActivityDataSet) <- ActivityDataSetCols
 
 # Step 5 - Create a second, independent tidy set with the average of each variable for each activity and each subject
